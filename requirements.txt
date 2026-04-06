@@ -5,4 +5,3 @@ python-jose==3.3.0
 python-dotenv==1.0.1
 pydantic==1.10.13
 slowapi==0.1.9
-httpx==0.24.1
