@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: exam-tracker-api
+    runtime: python
+    rootDir: exam-tracker-python-backend   # ← folder where main.py lives
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: SUPABASE_JWT_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: ENV
+        value: production
